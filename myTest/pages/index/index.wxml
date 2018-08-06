@@ -1,0 +1,210 @@
+<view style=" margin:0rpx 20rpx;">
+  <image style="width:100%;margin-top:0px" mode="widthFix" src="../../images/ca_11.jpg"></image>
+</view>
+
+
+<view class="orderList">
+  <view style="background-color:#fff;margin-left: 15rpx;margin-right: 15rpx; height: 30px;vertical-align: middle;margin-top:5px;display: flex;flex-direction: row;">
+    <view style="width:90%">当季水果折扣</view>
+    <view style="flex:1;font-size:13px;">
+      <navigator url="../order/orderlist/orderlist?id=1">更多</navigator>
+    </view>
+  </view>
+  <view class="line"></view>
+  <navigator url="../order/order/order?id=1">
+    <view class="layout_horizontal">
+      <view style="width:120px;height: 100px;">
+        <image style="width: 100px; height: 100px; " mode="aspectFit" src="../../images/goods/1.jpg"></image>
+      </view>
+      <view class="layout_vertical" style="flex:1;height: 100px;">
+        <view style="font-size:12px;height:20px;font-weight:bold">¥81.9
+          <span style="text-decoration:line-through;font-size:11px;color:#888">¥120</span>
+        </view>
+        <view style="flex:1;height:25px;font-size:12px;">自家葡萄便宜出售需要的抓紧了</view>
+        <view style="flex:1;align-items:center">
+          <progress percent="20" stroke-width="3" color="#FF8C00" />
+        </view>
+        <view style="flex:1;font-size:11px">20%已订购</view>
+        <view style="flex:1;font-size:11px">距离时间04:02:30</view>
+      </view>
+    </view>
+  </navigator>
+  <navigator url="../order/order/order?id=2" hover-class="navigator-hover">
+    <view class="layout_horizontal">
+      <view style="width:120px;height: 100px;">
+        <image style="width: 100px; height: 100px; " mode="aspectFit" src="../../images/goods/2.jpg"></image>
+      </view>
+      <view class="layout_vertical" style="flex:1;height: 100px;">
+        <view style="font-size:12px;height:20px;font-weight:bold">¥81.9
+          <span style="text-decoration:line-through;font-size:11px;color:#ccc">¥120</span>
+        </view>
+        <view style="flex:1;height:25px;font-size:12px;">今年的梨很甜需要的提前预定</view>
+        <view style="flex:1;">
+          <progress percent="60" stroke-width="3" color="#FF8C00" />
+        </view>
+        <view style="flex:1;font-size:11px">60%已订购</view>
+        <view style="flex:1;font-size:11px">距离时间04:02:30</view>
+      </view>
+    </view>
+  </navigator>
+
+  <navigator url="../order/order/order?id=3" hover-class="navigator-hover">
+    <view class="layout_horizontal">
+      <view style="width:120px;height: 100px;">
+        <image style="width: 100px; height: 100px; " mode="aspectFit" src="../../images/goods/3.jpg"></image>
+      </view>
+      <view class="layout_vertical" style="flex:1;height: 100px;">
+        <view style="font-size:12px;height:20px;font-weight:bold">¥81.9
+          <span style="text-decoration:line-through;font-size:11px;color:#ccc">¥120</span>
+        </view>
+        <view style="flex:1;height:25px;font-size:12px;">白水苹果刚出一批</view>
+        <view style="flex:1;">
+          <progress percent="10" stroke-width="3" color="#FF8C00" />
+        </view>
+        <view style="flex:1;font-size:11px">10%已订购</view>
+        <view style="flex:1;font-size:11px">距离时间04:02:30</view>
+      </view>
+    </view>
+  </navigator>
+
+
+  <view style="background-color:#fff;margin-left: 15rpx;margin-right: 15rpx; height: 30px;vertical-align: middle;margin-top:5px;display: flex;flex-direction: row;">
+    <view style="width:90%">蔬菜折扣</view>
+    <view style="flex:1;font-size:13px;">
+      <navigator url="../order/orderlist/orderlist?id=1">更多</navigator>
+    </view>
+  </view>
+  <view class="line"></view>
+  <navigator url="../order/order/order?id=1">
+    <view class="layout_horizontal">
+      <view style="width:120px;height: 100px;">
+        <image style="width: 100px; height: 100px; " mode="aspectFit" src="../../images/goods/s1.jpg"></image>
+      </view>
+      <view class="layout_vertical" style="flex:1;height: 100px;">
+        <view style="font-size:12px;height:20px;font-weight:bold">¥81.9
+          <span style="text-decoration:line-through;font-size:11px;color:#888">¥120</span>
+        </view>
+        <view style="flex:1;height:25px;font-size:12px;">自家葡萄便宜出售需要的抓紧了</view>
+        <view style="flex:1;align-items:center">
+          <progress percent="20" stroke-width="3" color="#FF8C00" />
+        </view>
+        <view style="flex:1;font-size:11px">20%已订购</view>
+        <view style="flex:1;font-size:11px">距离时间04:02:30</view>
+      </view>
+    </view>
+  </navigator>
+  <navigator url="../order/order/order?id=2" hover-class="navigator-hover">
+    <view class="layout_horizontal">
+      <view style="width:120px;height: 100px;">
+        <image style="width: 100px; height: 100px; " mode="aspectFit" src="../../images/goods/s2.jpg"></image>
+      </view>
+      <view class="layout_vertical" style="flex:1;height: 100px;">
+        <view style="font-size:12px;height:20px;font-weight:bold">¥81.9
+          <span style="text-decoration:line-through;font-size:11px;color:#ccc">¥120</span>
+        </view>
+        <view style="flex:1;height:25px;font-size:12px;">今年的梨很甜需要的提前预定</view>
+        <view style="flex:1;">
+          <progress percent="60" stroke-width="3" color="#FF8C00" />
+        </view>
+        <view style="flex:1;font-size:11px">60%已订购</view>
+        <view style="flex:1;font-size:11px">距离时间04:02:30</view>
+      </view>
+    </view>
+  </navigator>
+  <navigator url="../order/order/order?id=3" hover-class="navigator-hover">
+    <view class="layout_horizontal">
+      <view style="width:120px;height: 100px;">
+        <image style="width: 100px; height: 100px; " mode="aspectFit" src="../../images/goods/s3.jpg"></image>
+      </view>
+      <view class="layout_vertical" style="flex:1;height: 100px;">
+        <view style="font-size:12px;height:20px;font-weight:bold">¥81.9
+          <span style="text-decoration:line-through;font-size:11px;color:#ccc">¥120</span>
+        </view>
+        <view style="flex:1;height:25px;font-size:12px;">白水苹果刚出一批</view>
+        <view style="flex:1;">
+          <progress percent="10" stroke-width="3" color="#FF8C00" />
+        </view>
+        <view style="flex:1;font-size:11px">10%已订购</view>
+        <view style="flex:1;font-size:11px">距离时间04:02:30</view>
+      </view>
+    </view>
+  </navigator>
+</view>
+
+
+
+<view style=" margin:0rpx 20rpx;">
+  <image style="width:100%;margin-top:0px" mode="widthFix" src="../../images/top10.jpg"></image>
+</view>
+
+
+<view class="orderList">
+
+  <view style="background-color:#fff;margin-left: 15rpx;margin-right: 15rpx; height: 30px;vertical-align: middle;margin-top:5px;display: flex;flex-direction: row;">
+    <view style="width:90%">周边店铺排行</view>
+    <view style="flex:1;font-size:13px;">
+      <navigator url="../store/storelist/storelist?id=1">更多</navigator>
+    </view>
+  </view>
+  <view class="line"></view>
+  <navigator url="../store/store/store?id=1">
+    <view class="layout_horizontal" style="height:80px;">
+      <view style="width:120px;heigth:80px;align-items:center;display: flex;">
+        <image style="width: 100px; height: 80px; " src="../../images/store/sk.jpg"></image>
+      </view>
+      <view style="heigth:80px;flex:1;" class="layout_vertical1">
+        <view>
+          <view style="width:100px">
+            <text style="font-size:16px;">阿三生煎</text>
+          </view>
+          <view style="width:100px;justify-content:center;display:flex;">
+            <view style="width:20px;">
+              <image style="width: 16px; height: 16px; " src="../../images/tuan.png"></image>
+            </view>
+            <view style="width:20px">
+              <image style="width: 16px; height: 16px; " src="../../images/juan.png"></image>
+            </view>
+          </view>
+        </view>
+        <view style="flex:1;color:#999">
+          <span style="color:#C60;">团购：</span>2个团购信息</view>
+        <view style="flex:1;color:#999">
+          <span style="color:#C60;">外送：</span>支持外送上门</view>
+        <view style="flex:1;color:#999">位置：小区西门</view>
+      </view>
+    </view>
+
+  </navigator>
+
+
+
+  <view class="line" style="margin-top:10px"></view>
+  <navigator url="../store/store/store?id=1">
+    <view class="layout_horizontal" style="height:80px;">
+      <view style="width:120px;heigth:80px;align-items:center;display: flex;">
+        <image style="width: 100px; height: 80px; " src="../../images/store/sk.jpg"></image>
+      </view>
+      <view style="heigth:80px;flex:1;" class="layout_vertical1">
+        <view>
+          <view style="width:100px">
+            <text style="font-size:16px;">阿三生煎</text>
+          </view>
+          <view style="width:100px;justify-content:center;display:flex;">
+            <view style="width:20px;">
+              <image style="width: 16px; height: 16px; " src="../../images/tuan.png"></image>
+            </view>
+            <view style="width:20px">
+              <image style="width: 16px; height: 16px; " src="../../images/juan.png"></image>
+            </view>
+          </view>
+        </view>
+        <view style="flex:1;color:#999">
+          <span style="color:#C60;">团购：</span>2个团购信息</view>
+        <view style="flex:1;color:#999">
+          <span style="color:#C60;">外送：</span>支持外送上门</view>
+        <view style="flex:1;color:#999">位置：小区西门</view>
+      </view>
+    </view>
+
+  </navigator>
+</view>

@@ -1,0 +1,37 @@
+{
+  "pages": [
+    
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/order/order/order",
+    "pages/order/orderlist/orderlist",
+    "pages/store/storelist/storelist",
+    "pages/home/home",
+    "pages/message/message",
+    "pages/store/store/store"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "点击加载",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "selectedColor": "#888",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "福利",
+        "iconPath": "images/zhu1.png",
+        "selectedIconPath": "images/zhu1.png"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "text": "账户",
+        "iconPath": "images/zhu4.png",
+        "selectedIconPath": "images/zhu4.png"
+      }
+    ]
+  }
+}

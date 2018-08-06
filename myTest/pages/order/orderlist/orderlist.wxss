@@ -1,0 +1,27 @@
+
+
+/*横向布局  */
+.layout_horizontal{
+  font-size:12px;
+  height: 110px;
+  display: flex;
+  /*row 横向  column 列表  */
+  flex-direction: row;
+  margin-top:10px;
+  
+}
+
+/*纵向布局  */
+.layout_vertical{
+  height: 100rpx;
+  display: flex;
+  /*row 横向  column 列表  */
+  flex-direction: column;
+}
+.layout_vertical view{
+  margin-top:3px;
+}
+.orderList{
+  margin-left: 20rpx;margin-right: 20rpx;
+  font-size:12px;
+}

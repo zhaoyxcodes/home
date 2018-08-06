@@ -1,0 +1,87 @@
+<!--pages/store/storelist/storelist.wxml-->
+<view class="storelist">
+  <navigator url="../store/store?id=1">
+    <view class="layout_horizontal" style="height:80px;">
+      <view style="width:120px;heigth:80px;align-items:center;display: flex;">
+        <image style="width: 100px; height: 80px; " src="../../../images/store/sk.jpg" ></image>
+      </view>
+      <view style="heigth:80px;flex:1;" class="layout_vertical">
+        <view>
+          <view style="width:100px">
+            <text style="font-size:16px;">阿三生煎</text>
+          </view>
+          <view style="width:100px;justify-content:center;display:flex;">
+            <view style="width:20px;">
+              <image style="width: 16px; height: 16px; " src="../../../images/tuan.png"></image>
+            </view>
+            <view style="width:20px">
+              <image style="width: 16px; height: 16px; " src="../../../images/juan.png"></image>
+            </view>
+          </view>
+        </view>
+        <view style="flex:1;color:#999">
+          <span style="color:#C60;">团购：</span>2个团购信息</view>
+        <view style="flex:1;color:#999">
+          <span style="color:#C60;">外送：</span>支持外送上门</view>
+        <view style="flex:1;color:#999">位置：小区西门</view>
+      </view>
+    </view>
+  </navigator>
+
+
+ <navigator url="../store/store?id=1">
+    <view class="layout_horizontal" style="height:80px;">
+      <view style="width:120px;heigth:80px;align-items:center;display: flex;">
+        <image style="width: 100px; height: 80px; " src="../../../images/store/sk.jpg" ></image>
+      </view>
+      <view style="heigth:80px;flex:1;" class="layout_vertical">
+        <view>
+          <view style="width:100px">
+            <text style="font-size:16px;">阿三生煎</text>
+          </view>
+          <view style="width:100px;justify-content:center;display:flex;">
+            <view style="width:20px;">
+              <image style="width: 16px; height: 16px; " src="../../../images/tuan.png"></image>
+            </view>
+            <view style="width:20px">
+              <image style="width: 16px; height: 16px; " src="../../../images/juan.png"></image>
+            </view>
+          </view>
+        </view>
+        <view style="flex:1;color:#999">
+          <span style="color:#C60;">团购：</span>2个团购信息</view>
+        <view style="flex:1;color:#999">
+          <span style="color:#C60;">外送：</span>支持外送上门</view>
+        <view style="flex:1;color:#999">位置：小区西门</view>
+      </view>
+    </view>
+  </navigator>
+   <navigator url="../store/store?id=1">
+    <view class="layout_horizontal" style="height:80px;">
+      <view style="width:120px;heigth:80px;align-items:center;display: flex;">
+        <image style="width: 100px; height: 80px;" src="../../../images/store/sk.jpg" ></image>
+      </view>
+      <view style="heigth:80px;flex:1;" class="layout_vertical">
+        <view>
+          <view style="width:100px">
+            <text style="font-size:16px;">阿三生煎</text>
+          </view>
+          <view style="width:100px;justify-content:center;display:flex;">
+            <view style="width:20px;">
+              <image style="width: 16px; height: 16px; " src="../../../images/tuan.png"></image>
+            </view>
+            <view style="width:20px">
+              <image style="width: 16px; height: 16px; " src="../../../images/juan.png"></image>
+            </view>
+          </view>
+        </view>
+        <view style="flex:1;color:#999">
+          <span style="color:#C60;">团购：</span>2个团购信息</view>
+        <view style="flex:1;color:#999">
+          <span style="color:#C60;">外送：</span>支持外送上门</view>
+        <view style="flex:1;color:#999">位置：小区西门</view>
+      </view>
+    </view>
+  </navigator>
+
+</view>

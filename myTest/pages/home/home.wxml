@@ -1,0 +1,60 @@
+<view class="info">
+  <view style="font-size:18px;margin-bottom:10px;font-weight:bold">我的账户</view>
+  
+
+   <view>
+    <view style="font-size:16px;margin-top:10px;margin-bottom:10px;margin-left:5px;font-weight:bold"></view>
+    <view style="height:35px;align-items:center;display: flex;">
+      <span style="margin-left:13px;"><image style="width:34px;height:34px;border-radius:50%" mode="aspectFit" src="../../images/user/imguser.jpg"></image></span>
+      <span  style="margin-left:10px;">
+      <input placeholder="聚焦" />
+      </span>
+     
+    </view>
+
+
+    <view style="border:1px solid #ccc;border-radius: 5px;height:35px;align-items:center;display: flex;margin-top:10px;">
+      <span style="margin-left:13px;width:88%">金地西沣公元小区</span>
+      <span>
+        <image style="width: 15px; height:28px; " mode="aspectFit" src="../../images/system_orders/select_r.png"></image>
+      </span>
+    </view>
+    <view style="border:1px solid #ccc;border-radius: 5px;height:35px;align-items:center;display: flex;margin-top:10px;">
+      <span style="margin-left:13px;width:88%">我的账户</span>
+      <span>
+        <image style="width: 15px; height:28px; " mode="aspectFit" src="../../images/system_orders/select_r.png"></image>
+      </span>
+    </view>
+    <view style="border:1px solid #ccc;border-radius: 5px;height:35px;align-items:center;display: flex;margin-top:10px;">
+      <span style="margin-left:13px;width:88%">我的卡卷</span>
+      <span>
+        <image style="width: 15px; height:28px; " mode="aspectFit" src="../../images/system_orders/select_r.png"></image>
+      </span>
+    </view>
+
+
+    <view>
+    <view style="font-size:16px;margin-top:10px;margin-bottom:10px;margin-left:5px;font-weight:bold">订单</view>
+    <view style="border:1px solid #ccc;border-radius: 5px;height:35px;align-items:center;display: flex;">
+      <span style="margin-left:13px;width:88%">我的订单</span>
+      <span>
+        <image style="width: 15px; height:30px; " mode="aspectFit" src="../../images/system_orders/select_r.png"></image>
+      </span>
+    </view>
+  </view>
+
+  <view>
+    <view style="font-size:16px;margin-top:10px;margin-bottom:10px;margin-left:5px;font-weight:bold">消息中心</view>
+      <navigator url="../message/message?id=1">
+    <view style="border:1px solid #ccc;border-radius: 5px;height:35px;align-items:center;display: flex;">
+      <span style="margin-left:13px;width:88%">我的消息</span>
+      <span>
+        <image style="width: 15px; height:28px; " mode="aspectFit" src="../../images/system_orders/select_r.png"></image>
+      </span>
+    </view>
+    </navigator>
+  </view>
+
+    
+  </view>
+</view>

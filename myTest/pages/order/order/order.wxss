@@ -1,0 +1,29 @@
+/* pages/order.wxss */
+.order{
+  margin-left: 20rpx;margin-right: 20rpx;
+  font-size:12px;
+}
+.order view{
+  margin-top: 5px;
+}
+.order-class{
+  background-color:#fff;
+  height: 30px;
+  vertical-align: middle;
+  font-size:15px;
+  color:#C60;
+}
+
+/*横向布局  */
+.layout_horizontal{
+  font-size:12px;
+  display: flex;
+  /*row 横向  column 列表  */
+  flex-direction: row;
+}
+.xing{
+  background-image:url("https://images-cn.ssl-images-amazon.com/images/G/01/AUIClients/AmazonUIBaseCSS-sprite_1x-7233320d393c05a5508cf7d579641c4b327cbda4._V2_.png");
+  background-repeat: no-repeat;
+  background-position: -69px -368px;
+  width:80px;height:18px;
+}

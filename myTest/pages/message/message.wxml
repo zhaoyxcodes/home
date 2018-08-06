@@ -1,0 +1,8 @@
+<!--pages/message/message.wxml-->
+
+<view class="messageList">
+  <view style="font-size:16px;font-weight:bold">商家提醒</view>
+  <view>我会在12点到你家，进行送货。</view>
+  <view style="font-size:16px;font-weight:bold">优惠提醒</view>
+  <view>你关注的店铺“一家亲”正在打折中。</view>
+</view>

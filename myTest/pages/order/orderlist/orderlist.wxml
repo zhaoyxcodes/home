@@ -1,0 +1,30 @@
+<view class="orderList">
+<navigator url="../order/order?id=1"  >
+<view class="layout_horizontal" >
+  <view style="width:120px;height: 100px;">
+    <image style="width: 100px; height: 100px; " mode="aspectFit" src="../../../images/goods/1.jpg"></image>
+  </view>
+  <view class="layout_vertical" style="flex:1;height: 100px;">
+    <view style="font-size:12px;height:20px;font-weight:bold">¥81.9   <span style="text-decoration:line-through;font-size:11px;color:#888">¥120</span></view>
+    <view style="flex:1;height:25px;font-size:12px;">自家葡萄便宜出售需要的抓紧了</view>
+    <view style="flex:1;align-items:center" ><progress percent="20" stroke-width="3" color="#FF8C00" /></view>
+    <view style="flex:1;font-size:11px" >20%已订购</view>
+    <view style="flex:1;font-size:11px">距离时间04:02:30</view>
+  </view>
+</view>
+</navigator>
+<navigator url="../order/order?id=1"  >
+<view class="layout_horizontal" >
+  <view style="width:120px;height: 100px;">
+    <image style="width: 100px; height: 100px; " mode="aspectFit" src="../../../images/goods/2.jpg"></image>
+  </view>
+  <view class="layout_vertical" style="flex:1;height: 100px;">
+    <view style="font-size:12px;height:20px;font-weight:bold">¥81.9   <span style="text-decoration:line-through;font-size:11px;color:#888">¥120</span></view>
+    <view style="flex:1;height:25px;font-size:12px;">自家葡萄便宜出售需要的抓紧了</view>
+    <view style="flex:1;align-items:center" ><progress percent="20" stroke-width="3" color="#FF8C00" /></view>
+    <view style="flex:1;font-size:11px" >20%已订购</view>
+    <view style="flex:1;font-size:11px">距离时间04:02:30</view>
+  </view>
+</view>
+</navigator>
+</view>

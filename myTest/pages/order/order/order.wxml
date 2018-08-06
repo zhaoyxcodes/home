@@ -1,0 +1,137 @@
+<!--pages/order.wxml-->
+<view class="order">
+<view style="color:#0066c0"><navigator url="#" hover-class="navigator-hover">便宜水果店</navigator></view>
+<view style="color:#888">沪太8号葡萄大减价</view>
+<view ><image src="../../../images/system_orders/off.png" style="width:61px;height:24px"/></view>
+<view style="align-items:center;justify-content:center;display:flex;">
+  <swiper indicator-dots="true" indicator-color="#fff" indicator-active-color="#ccc" autoplay="true" style="width:250px;height:200px;" >
+    <block >
+      <swiper-item>
+        <image src="../../../images/goods/1.jpg"  />
+      </swiper-item>
+      <swiper-item>
+        <image src="../../../images/goods/2.jpg"  />
+      </swiper-item>
+      <swiper-item>
+        <image src="../../../images/goods/3.jpg" />
+      </swiper-item>
+      <swiper-item>
+        <image src="../../../images/goods/1.jpg" />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class="line" style="margin-top:10px"></view>
+
+<view class="layout_horizontal" style="margin-top:10px">
+  <view style="width:60px;text-align:right;">类型：</view>
+  <view style="flex:1;align-items:center;">
+    <picker bindchange="typeBindPickerChange" value="{{type_index}}" range="{{type_array}}" style="border:1px solid #ccc;width:30px">
+        {{type_array[type_index]}}
+    </picker>
+  </view>
+</view>
+<view class="line" style="margin-top:10px"></view>
+<view class="layout_horizontal" >
+  <view style="width:60px;text-align:right;">价格：</view>
+  <view style="flex:1;width:100px;">¥ 189</view>
+</view>
+<view class="layout_horizontal" >
+  <view style="width:60px;text-align:right;">秒杀价：</view>
+  <view style="flex:1;width:100px;"><span style="color:#B12704;font-size:13px">¥ 89</span></view>
+</view>
+<view class="layout_horizontal" >
+  <view style="width:60px;text-align:right;">数量：</view>
+  <view style="flex:1;width:100px;">
+    <picker bindchange="numBindPickerChange" value="{{num_index}}" range="{{num_array}}" style="border:1px solid #ccc;width:30px">
+        {{num_array[num_index]}}
+    </picker>
+  </view>
+</view>
+<view class="layout_horizontal" >
+  <view style="width:60px;text-align:right;">支付方式：</view>
+  <view style="flex:1;width:100px;">
+    <picker bindchange="payBindPickerChange" value="{{pay_index}}" range="{{pay_array}}" style="border:1px solid #ccc;width:50px">
+        {{pay_array[pay_index]}}
+    </picker>
+  </view>
+</view>
+<view class="layout_horizontal" >
+  <view style="width:60px;text-align:right;">配送方式：</view>
+  <view style="flex:1;width:100px;">
+    <picker bindchange="distributionBindPickerChange" value="{{distribution_index}}" range="{{distribution_array}}" style="border:1px solid #ccc;width:80px">
+        {{distribution_array[distribution_index]}}
+    </picker>
+  </view>
+</view>
+<view>
+<button type="default" style="background-color:#f0c14b; border-color:#a88734 #9c7e31 #846a29">预定</button>
+</view>
+<view style="margin-top:10px">
+  <view class="order-class">商品描述</view>
+  <view>
+    <text  space="nbsp">颜色：番茄红
+利用余热「保温烹调」，煮饭炖菜轻轻松松。不必担心烧焦的4.0mm厚锅底设计。适合3~5人的大容量。省时节能。</text>
+  </view>
+  <view style="display:flex;justify-content:center;" >
+    <image src="../../../images/goods/1.jpg" />
+  </view>
+  <view style="display:flex;justify-content:center;" >
+    <image src="../../../images/goods/1.jpg" />
+  </view>
+</view>
+<view>
+  <view class="order-class">订购名单</view>
+  <view>
+    <view class="line"></view>
+      <view class="layout_horizontal">
+        <view style="width:100px;text-align:right">老头</view>
+         <view style="flex:1;"><text space="nbsp">   132*****370    数量：1</text></view>
+    </view>
+    <view class="line"></view>
+      <view class="layout_horizontal">
+        <view style="width:100px;text-align:right">zyx</view>
+         <view style="flex:1;"><text space="nbsp">   132*****370    数量：1</text></view>
+    </view>
+    <view class="line"></view>
+      <view class="layout_horizontal">
+        <view style="width:100px;text-align:right">小豌豆</view>
+        <view style="flex:1;"><text space="nbsp">   132*****370    数量：1</text></view>
+    </view>
+  </view>
+</view>
+<view>
+  <view class="order-class">评价</view>
+  <view>
+    <view style="margin-top:10px">
+      <view style="font-size:13px;align-items:center;display:flex;"><image src="../../../images/goods/1.jpg" style="width:34px;height:34px;border-radius:50%" />
+        <text space="nbsp">   Fred Taute</text>
+      </view>
+      <view>5.0 颗星</view>
+      <view>已确认购买</view>
+      <view><text space="nbsp" >  时间到底是什么？时间可逆转吗？可以穿越时间隧道去旅行吗？宇宙有没有边缘？宇宙起源于哪里，未来会怎样？</text></view>
+      <view style="color:#0066c0"><navigator url="#"  >7 个人回复了这条消息</navigator></view>
+      <view>2017年8月19日</view>
+      <view>
+        <button type="default" size="mini">回应</button>
+      </view>
+    </view>
+   
+    <view style="margin-top:10px">
+      <view style="font-size:13px;align-items:center;display:flex;"><image src="../../../images/goods/1.jpg" style="width:34px;height:34px;border-radius:50%" />
+        <text space="nbsp">   Fred Taute</text>
+      </view>
+      <view ><i class="xing" ></i>颗星</view>
+      <view>已确认购买</view>
+      <view><text space="nbsp" >  时间到底是什么？时间可逆转吗？可以穿越时间隧道去旅行吗？宇宙有没有边缘？宇宙起源于哪里，未来会怎样？</text></view>
+      <view style="color:#0066c0"><navigator url="#"  >7 个人回复了这条消息</navigator></view>
+      <view>2017年8月19日</view>
+      <view>
+        <button type="default" size="mini">回应</button>
+      </view>
+    </view>
+
+
+  </view>
+</view>
+</view>

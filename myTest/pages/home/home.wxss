@@ -1,0 +1,6 @@
+/* pages/home/home.wxss */
+.info{
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  font-size:12px;
+}
