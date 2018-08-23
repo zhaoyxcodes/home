@@ -7,7 +7,7 @@ Page({
    */
   data: {
     userimg:'../../images/user/imguser.jpg',
-    username:""
+    username:"未登录"
   },
 
   /**
