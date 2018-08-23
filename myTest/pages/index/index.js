@@ -15,6 +15,10 @@ Page({
     })
   },
   onLoad: function () {
+  
+
+
+
     //设置定位标题
     wx.setNavigationBarTitle({
       title: app.globalData.title
