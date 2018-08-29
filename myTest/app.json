@@ -1,6 +1,6 @@
 {
   "pages": [
-    
+    "pages/goods/addgoods/addgoods",
     "pages/index/index",
     "pages/logs/logs",
     "pages/order/order/order",
@@ -9,8 +9,7 @@
     "pages/home/home",
     "pages/message/message",
     "pages/store/store/store",
-    "pages/home/authuser/authuser",
-    "pages/goods/addgoods/addgoods"
+    "pages/home/authuser/authuser"
   ],
   "window": {
     "backgroundTextStyle": "light",

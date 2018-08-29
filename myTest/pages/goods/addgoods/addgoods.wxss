@@ -84,3 +84,43 @@ icon {
 .hideTrue {
   display: none
 }
+
+
+.table {
+  border: 0px solid darkgray;
+}
+.tr {
+  display: flex;
+  width: 100%;
+  justify-content: left;
+  height: 3rem;
+  align-items: left;
+}
+.td {
+    
+    justify-content: center;
+    text-align: left;
+}
+
+/*横向布局  */
+.layout_horizontal{
+  display: flex;
+  /*row 横向  column 列表  */
+  flex-direction: row;
+}
+/*纵向布局  */
+.layout_vertical{
+  display: flex;
+  /*row 横向  column 列表  */
+  flex-direction: column;
+}
+.border-r-b{
+  border-bottom:1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+.border-l{
+  border-left: 1px solid #ccc;
+}
+.border-t{
+  border-top: 1px solid #ccc;
+}

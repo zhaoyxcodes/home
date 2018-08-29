@@ -25,63 +25,134 @@
         </view>
 
 
-      <view>商品详细图片</view>
-      <view class="weui-uploader__hd" style="width:100%;">
-        <view class="weui-uploader__title" style="width:80%">点击可预览选好的图片</view>
-        <view class="weui-uploader__info" style="width:20%;text-align:right;">{{pics.length}}/9</view>
+        <view>商品详细图片</view>
+        <view class="weui-uploader__hd" style="width:100%;">
+          <view class="weui-uploader__title" style="width:80%">点击可预览选好的图片</view>
+          <view class="weui-uploader__info" style="width:20%;text-align:right;">{{pics.length}}/9</view>
+        </view>
+        <view class="weui-uploader__bd">
+          <view class="weui-uploader__files">
+            <block wx:for="{{pics}}" wx:for-item="image">
+              <view class="weui-uploader__file">
+                <image class="weui-uploader__img" src="{{image}}" data-src="{{image}}" bindtap="previewImage"></image>
+              </view>
+            </block>
+          </view>
+          <view class="weui-uploader__input-box {{isShow?'true':'hideTrue'}}">
+            <view class="weui-uploader__input" bindtap="chooseImage"></view>
+          </view>
+        </view>
       </view>
-      <view class="weui-uploader__bd">
-        <view class="weui-uploader__files">
-          <block wx:for="{{pics}}" wx:for-item="image">
-            <view class="weui-uploader__file">
-              <image class="weui-uploader__img" src="{{image}}" data-src="{{image}}" bindtap="previewImage"></image>
-            </view>
+
+
+      <view class="section">
+        <view class="section__title">描述</view>
+        <textarea placeholder="商品描述" name="describe" />
+      </view>
+      <view class="section">
+        <view class="section__title">原价</view>
+        <input name="price" placeholder="" />
+      </view>
+      <view class="section">
+      </view>
+      <view class="section">
+        <view class="section__title">优惠天数</view>
+        <slider bindchange="savetime" min="1" max="7" show-value/>
+      </view>
+      <view class="section">
+        <view class="section__title">支付方式</view>
+        <checkbox-group bindchange="savepaytype">
+          <checkbox value="0" />微信支付
+          <checkbox value="1" />见面支付
+        </checkbox-group>
+      </view>
+      <view class="section">
+        <view class="section__title">配送方式</view>
+        <checkbox-group bindchange="savedistype">
+          <checkbox value="0" />上门送货
+          <checkbox value="1" />定点自提
+        </checkbox-group>
+      </view>
+      <!--sku-->
+      <view class="section">
+          <block wx:for="{{attrdatalist}}" wx:key="item">
+            <checkbox-group bindchange="attrbind" data-attindex="{{index}}" data-attid="{{item.id}}" data-attname="{{item.attrname}}">
+               <view class="section__title">{{item.attrname}}</view>
+             
+                  <block wx:for="{{item.attrval}}" wx:key="item1" wx:for-item="item1" wx:for-index="index1">
+                    <checkbox value="{{index1}}" />{{item1.name}}
+                  </block>
+            </checkbox-group>
           </block>
         </view>
-        <view class="weui-uploader__input-box {{isShow?'true':'hideTrue'}}">
-          <view class="weui-uploader__input" bindtap="chooseImage"></view>
+    <view class="section">
+    <view class="section__title">商品详细计算</view>
+        <view class="layout_horizontal" style="justify-content:center;">
+          <block wx:for="{{checklist}}" wx:key="item" wx:for-index="index0">
+            <view style="width:50px;" wx:if="{{item.attrval.length>0}}">
+              <view class="layout_vertical" style="width:50px;">
+                <block wx:if="{{index0==0}}">
+                  <view style="width:50px;text-align:center " class="border-r-b border-t border-l">
+                    {{item.attrname}}
+                  </view>
+                </block>
+                <block wx:if="{{index0!=0}}">
+                  <view style="width:50px;text-align:center " class="border-r-b border-t">
+                  {{item.attrname}}
+                  </view>
+                </block>    
+                <block wx:for="{{item.fornum}}" wx:key="item0" wx:for-item="item0">
+                  <block wx:for="{{item.attrval}}" wx:key="item1" wx:for-item="item1" wx:for-index="index1">
+                    <block wx:if="{{index0==0}}">
+                    <view style="width:50px; height:{{item.height}}px;"  class="border-r-b border-l">
+                      {{item1.name}}
+                    </view>
+                    </block>
+                     <block wx:if="{{index0!=0}}">
+                     <view style="width:50px; height:{{item.height}}px;"  class="border-r-b">
+                      {{item1.name}}
+                    </view>
+                    </block>
+                    
+                  </block>
+                </block>
+              </view>
+            </view>
+          </block>
+
+
+          <view style="width:50px;">
+            <view class="layout_vertical" style="width:50px;">
+              <view style="width:50px;text-align:center " class="border-r-b border-t">
+                库存
+              </view>
+              <block wx:for="{{count}}" wx:key="item">
+                <view style="width:50px; height:{{heigthrpx}}px;" class="border-r-b">
+                  <input style="width:20px" value="{{item}}" id="{{index}}" bindchange="countSKU" />
+                </view>
+              </block>
+            </view>
+          </view>
+
+          <view style="width:50px;">
+            <view class="layout_vertical" style="width:50px;">
+              <view style="width:50px;text-align:center " class="border-r-b border-t">
+                价格
+              </view>
+              <block wx:for="{{priceli}}" wx:key="item">
+                <view style="width:50px; height:{{heigthrpx}}px;" class="border-r-b">
+                  <input style="width:20px" value="{{item}}" id="{{index}}" bindchange="priceSKU" />
+                </view>
+              </block>
+            </view>
+          </view>
+
         </view>
       </view>
+      <!--sku end-->
+      <view>
+        <button type="primary" loading="{{loading}}" disabled="{{disabled}}" form-type="submit">发布</button>
+      </view>
     </view>
-
-
-    <view class="section">
-      <view class="section__title">描述</view>
-      <textarea placeholder="商品描述" name="describe" />
-    </view>
-    <view class="section">
-      <view class="section__title">原价</view>
-      <input name="price" placeholder="" />
-    </view>
-    <view class="section">
-      <view class="section__title">折后价格</view>
-      <input name="saleprice" placeholder="" />
-    </view>
-    <view class="section">
-      <view class="section__title">优惠天数</view>
-      <slider bindchange="savetime" min="1" max="7" show-value/>
-    </view>
-    <view class="section">
-      <view class="section__title">库存</view>
-      <slider bindchange="savenumber" min="1" max="99" show-value/>
-    </view>
-    <view class="section">
-      <view class="section__title">支付方式</view>
-      <checkbox-group bindchange="savepaytype">
-        <checkbox value="0" />微信支付
-        <checkbox value="1" />见面支付
-      </checkbox-group>
-    </view>
-    <view class="section">
-      <view class="section__title">配送方式</view>
-      <checkbox-group bindchange="savedistype">
-        <checkbox value="0" />上门送货
-        <checkbox value="1" />定点自提
-      </checkbox-group>
-    </view>
-    <view>
-      <button type="primary" loading="{{loading}}" disabled="{{disabled}}" form-type="submit">发布</button>
-    </view>
-  </view>
   </view>
 </form>
