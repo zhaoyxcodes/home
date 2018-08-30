@@ -10,7 +10,6 @@ Page({
     disabled: false,
     title:"",
     time:1,
-    number:1,
     paytype:"",
     distype:"",
     //sku
@@ -18,7 +17,7 @@ Page({
     attrSumSize: 0,//总数
     attrdatalist: [{ "id": "color", "attrname": "ys", "attrval": [{ "id": "1", "name": "黑色" }, { "id": "2", "name": "白色" }, { "id": "0", "name": "褐色" }] }, { "id": "size", "attrname": "size", "attrval": [{ "id": "3", "name": "15cm" }, { "id": "4", "name": "18cm" }] }, { "id": "pp", "attrname": "品牌", "attrval": [{ "id": "7", "name": "NIKE" }, { "id": "8", "name": "AD" }, { "id": "9", "name": "KW" }] },],//后台获取属性
     checklist: [],//选中的属性值
-    submitSKU: [],
+    submitSKU: [],//保存sku
     skuli: [],//sku值的下标[0,0]
     priceli: [],
     count: []
@@ -43,47 +42,76 @@ Page({
     if (!bol) { return false; }
     bol = this.vidateform(e.detail.value.price, "请输入商品原始价格");
     if (!bol) { return false; }
-    bol = this.vidateform(e.detail.value.saleprice, "请输入商品折后价格");
-    if (!bol) { return false; }
     bol = this.vidateform(this.data.paytype, "请选择支付方式");
     if (!bol) { return false; }
     bol = this.vidateform(this.data.distype, "请选择配送方式");
     if (!bol) { return false; }
 
-    if (typeof (this.data.pics2) == 'undefined' || this.data.pics2.length<=0){
-      util.showmodal("","请上传商品展示图片！", false)
-      return false;
-    }
-    if (typeof (this.data.pics) == 'undefined' || this.data.pics.length <= 0) {
-      util.showmodal("", "请上传商品详细图片！", false)
-      return false;
-    }
-    
-    var newfilepath2 = ""; //图片展示真实路径
-    for (var i = 0; i < this.data.pics2.length; i++) {
-      console.log(this.data.pics2[i])
-      var newfile = this.uploadfile(this.data.pics2[i]);
-      if (newfile==''){
+    bol = this.vidateform(this.data.submitSKU, "请选择SKU属性");
+    if (!bol) { return false; }
+
+    for (var i = 0; i < this.data.submitSKU.length;i++){
+      bol = this.vidateform(this.data.submitSKU[i].prive, "SKU价格不能为空");
+      if (!bol) { return false; }
+      bol = this.vidateform(this.data.submitSKU[i].count, "SKU库存不能为空");
+      if (!bol) { return false; }
+       if (this.data.submitSKU[i].prive<=0){
+        util.showmodal("", "SKU商品价格必须大于0！", false)
+        return false;
+       } else if (this.data.submitSKU[i].count <= 0 || Math.round(this.data.submitSKU[i].count) != this.data.submitSKU[i].count){
+        util.showmodal("", "SKU商品库存必须大于0且为整数！", false)
         return false;
       }
-      newfilepath2 += newfile + ";";
     }
+
+    // if (typeof (this.data.pics2) == 'undefined' || this.data.pics2.length<=0){
+    //   util.showmodal("","请上传商品展示图片！", false)
+    //   return false;
+    // }
+    // if (typeof (this.data.pics) == 'undefined' || this.data.pics.length <= 0) {
+    //   util.showmodal("", "请上传商品详细图片！", false)
+    //   return false;
+    // }
+    
+    var newfilepath2 = ""; //图片展示真实路径
+    // for (var i = 0; i < this.data.pics2.length; i++) {
+    //   console.log(this.data.pics2[i])
+    //   var newfile = this.uploadfile(this.data.pics2[i]);
+    //   if (newfile==''){
+    //     return false;
+    //   }
+    //   newfilepath2 += newfile + ";";
+    // }
     console.log("pp:" + newfilepath2)
 
     var newfilepath=""; //详细图片真实路径
-    for (var i = 0; i < this.data.pics.length;i++){
-      console.log(this.data.pics[i])
-      var newfile=this.uploadfile(this.data.pics[i]);
-      if (newfile == '') {
-        return false;
-      }
-      newfilepath += newfile+";";
-    }
+    // for (var i = 0; i < this.data.pics.length;i++){
+    //   console.log(this.data.pics[i])
+    //   var newfile=this.uploadfile(this.data.pics[i]);
+    //   if (newfile == '') {
+    //     return false;
+    //   }
+    //   newfilepath += newfile+";";
+    // }
     console.log("pp:" + newfilepath)
 
-    this.setData({
-      loading: true,
-      disabled: true
+    // this.setData({
+    //   loading: true,
+    //   disabled: true
+    // })
+    //准备提交
+    var sub_data = { "user": JSON.stringify(wx.getStorageSync("user")), "title": e.detail.value.title, "describe": e.detail.value.describe, "price": e.detail.value.price, "paytype": this.data.paytype, "distype": this.data.distype, "time": this.data.time, "submitSKU": JSON.stringify(this.data.submitSKU), "img0": newfilepath2, "img1": newfilepath}
+    console.log(sub_data)
+    wx.request({
+      url: 'https://zhao/home/home/saveGoods',
+      data: sub_data,
+      method: 'POST',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      success: function (res2) {
+        console.log(res2)
+      }
     })
     
   },
@@ -258,15 +286,45 @@ Page({
     this.js_sku()//计算sku
 
   },
+  focusCSKU:function(e){
+    var val = e.detail.value
+    if (val=="0"){
+    }
+  },
+  focusPSKU:function(e){
+    var val = e.detail.value
+    if (val == "0") {
+    }
+  },
   priceSKU: function (e) {
     var val = e.detail.value
     var index = e.currentTarget.id
+    var bol = this.vidateform(val, "价格不能为空");
+    if (!bol) { return false; }
+    if (isNaN(val) || val<=0){
+      wx.showToast({
+        title: "价格必须为数字并且大于0",
+        image: '../Image/error.png',
+        duration: 2000
+      })
+      return false;
+    }
     this.data.priceli[index] = val;
     this.js_countorprice();
   },
   countSKU: function (e) {
     var val = e.detail.value
     var index = e.currentTarget.id
+    var bol = this.vidateform(val, "库存不能为空");
+    if (!bol) { return false; }
+    if (isNaN(val) || Math.round(val) != val||val <= 0) {
+      wx.showToast({
+        title: "库存必须为整数并且大于0",
+        image: '../Image/error.png',
+        duration: 2000
+      })
+      return false;
+    }
     this.data.count[index] = val;
     this.js_countorprice();
   },

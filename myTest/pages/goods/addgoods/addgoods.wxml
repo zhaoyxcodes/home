@@ -85,31 +85,31 @@
             </checkbox-group>
           </block>
         </view>
-    <view class="section">
+    <view class="section"  wx:if="{{checklist.length>0}}">
     <view class="section__title">商品详细计算</view>
         <view class="layout_horizontal" style="justify-content:center;">
           <block wx:for="{{checklist}}" wx:key="item" wx:for-index="index0">
-            <view style="width:50px;" wx:if="{{item.attrval.length>0}}">
-              <view class="layout_vertical" style="width:50px;">
+            <view  wx:if="{{item.attrval.length>0}}" style="width:100%">
+              <view class="layout_vertical" >
                 <block wx:if="{{index0==0}}">
-                  <view style="width:50px;text-align:center " class="border-r-b border-t border-l">
+                  <view style="text-align:center " class="border-r-b border-t border-l">
                     {{item.attrname}}
                   </view>
                 </block>
                 <block wx:if="{{index0!=0}}">
-                  <view style="width:50px;text-align:center " class="border-r-b border-t">
+                  <view style="text-align:center " class="border-r-b border-t">
                   {{item.attrname}}
                   </view>
                 </block>    
                 <block wx:for="{{item.fornum}}" wx:key="item0" wx:for-item="item0">
                   <block wx:for="{{item.attrval}}" wx:key="item1" wx:for-item="item1" wx:for-index="index1">
                     <block wx:if="{{index0==0}}">
-                    <view style="width:50px; height:{{item.height}}px;"  class="border-r-b border-l">
+                    <view style=" height:{{item.height}}px;"  class="border-r-b border-l">
                       {{item1.name}}
                     </view>
                     </block>
                      <block wx:if="{{index0!=0}}">
-                     <view style="width:50px; height:{{item.height}}px;"  class="border-r-b">
+                     <view style=" height:{{item.height}}px;"  class="border-r-b">
                       {{item1.name}}
                     </view>
                     </block>
@@ -121,27 +121,27 @@
           </block>
 
 
-          <view style="width:50px;">
-            <view class="layout_vertical" style="width:50px;">
-              <view style="width:50px;text-align:center " class="border-r-b border-t">
+          <view     style="width:100%">
+            <view class="layout_vertical" >
+              <view style="text-align:center " class="border-r-b border-t">
                 库存
               </view>
               <block wx:for="{{count}}" wx:key="item">
-                <view style="width:50px; height:{{heigthrpx}}px;" class="border-r-b">
-                  <input style="width:20px" value="{{item}}" id="{{index}}" bindchange="countSKU" />
+                <view style=" height:{{heigthrpx}}px;" class="border-r-b">
+                  <input  value="{{item}}" id="{{index}}"bindfocus="focusCSKU" bindchange="countSKU" />
                 </view>
               </block>
             </view>
           </view>
 
-          <view style="width:50px;">
+          <view style="width:100%" >
             <view class="layout_vertical" style="width:50px;">
-              <view style="width:50px;text-align:center " class="border-r-b border-t">
+              <view style="text-align:center " class="border-r-b border-t">
                 价格
               </view>
               <block wx:for="{{priceli}}" wx:key="item">
-                <view style="width:50px; height:{{heigthrpx}}px;" class="border-r-b">
-                  <input style="width:20px" value="{{item}}" id="{{index}}" bindchange="priceSKU" />
+                <view style=" height:{{heigthrpx}}px;" class="border-r-b">
+                  <input  value="{{item}}" id="{{index}}" bindfocus="focusPSKU" bindchange="priceSKU" />
                 </view>
               </block>
             </view>
