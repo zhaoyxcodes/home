@@ -1,1 +1,80 @@
-/* pages/store/store/store.wxss */
+/*纵向布局  */
+.layout_vertical{
+  display: flex;
+  /*row 横向  column 列表  */
+  flex-direction: column;
+}
+/*横向布局  */
+.layout_horizontal{
+  display: flex;
+  /*row 横向  column 列表  */
+  flex-direction: row;
+}
+.sort{
+border-top:1px solid rgb(204, 204, 204);
+border-bottom:1px solid rgb(204, 204, 204);
+ background: #eeeeee;
+ height: 30px;
+ justify-content:center;
+  align-items: center;
+}
+.layout_horizontal view{
+  height: 20px;
+  width:20%;
+  font-size:12px;
+  justify-content:center;
+  display: flex;
+}
+
+/*圆点数字标注*/
+.notice {
+    width:28rpx;
+    height:28rpx;
+    color:#fff;
+    text-align:center;
+    /* background-color:#ec9e14; */
+     background-color:#C60;
+    border-radius:50%;
+    position:absolute;
+    float:left;
+   /* margin-top: 8rpx;*/
+   top:5rpx;
+    font-size: 15rpx;
+    right:30rpx;
+    line-height:30rpx; }
+
+/*顶部导航样式*/
+  .navbar{ 
+ flex: none; 
+ display: flex; 
+ background: #fff; 
+ margin-top: 20rpx;
+ z-index: 50; 
+} 
+.navbar .item{ 
+ position: relative; 
+ flex: auto; 
+ text-align: center;
+ line-height: 60rpx; 
+ font-size: 24rpx;
+ color: #666666;
+ font-family: Microsoft YaHei;
+} 
+.navbar .item.active{ 
+ color: #C60;
+ font-size: 24rpx;
+ font-family: Microsoft YaHei;
+} 
+.navbar .item.active:after{ 
+ content: ""; 
+ display: block; 
+ position: absolute; 
+ bottom: 0; 
+ left: 0; 
+ right: 0; 
+ height: 4rpx; 
+ background: #C60;
+ font-size: 24rpx;
+ color: #666666;
+ font-family: Microsoft YaHei;
+}

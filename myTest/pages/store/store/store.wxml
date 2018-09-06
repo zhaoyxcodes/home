@@ -1,3 +1,75 @@
 <!--pages/store/store/store.wxml-->
-<!-- <view style="height:100px;background-color:#ffd1f0;align-items:center;display: flex;"><span style="margin-left:20px;font-size:17px">阿三生煎</span></view> -->
+ <view wx:if="{{sdata!=null}}">
+ <view  style="height:50px;align-items:center;display: flex;">
+ <view style="width:25%;height:50px;justify-content:center;display: flex;"><image src="../../../images/user/imguser.jpg" style="width:50px;height:50px;"/></view>
+ <view style="height:50px" class="layout_vertical">
+    <view style="margin-left:13px;">阿三</view>
+    <view style="margin-left:13px;">***关于店铺</view>
+ </view>
+ </view> 
 
+<!--导航菜单-->
+<view class="navbar" style=" z-index:50">
+  <!--循环-->
+  <view wx:for="{{navbar}}" data-idx="{{index}}" wx:key="unique" class="item {{currentTab==index ? 'active' : ''}}" bindtap="navbarTap">
+    <!-- <view class="notice" wx:if="{{count[index]>0}}">{{count[index]}}</view> -->
+    {{item}}
+  </view>
+</view>
+
+<view hidden="{{currentTab !== 0}}" id="one">
+  <view  class="layout_horizontal sort"><view style="border-right:1px solid #ccc;">{{lb}}</view><view>相关度</view><view>人气</view><view>最新</view><view>价格</view></view>
+
+  <view wx:if="{{pdata==null}}">no list</view>
+  <view wx:if="{{pdata!=null}}" wx:for="{{pdata}}" wx:if="{{item.status==1}}">
+  {{item.title}}-{{item.time}}
+  </view>
+</view>
+
+<view hidden="{{currentTab !== 1}}" id="one">
+<view wx:if="{{pdata==null}}">no list</view>
+  <view wx:if="{{pdata!=null}}" wx:for="{{pdata}}" wx:if="{{item.status==0}}">
+  {{item.title}}-{{item.time}}
+  </view>
+</view>
+
+ 
+ </view> 
+
+ <view wx:if="{{sdata==null}}">
+    <view class="section">
+        <view class="section__title">店名</view>
+        <input name="title" placeholder="" />
+    </view>
+    <view>店铺头像</view>
+        <view class="weui-uploader__bd">
+          <view class="weui-uploader__files">
+            <block wx:for="{{pics2}}" wx:for-item="image">
+              <view class="weui-uploader__file">
+                <image class="weui-uploader__img" src="{{image}}" data-src="{{image}}" bindtap="previewImage"></image>
+              </view>
+            </block>
+          </view>
+          <view class="weui-uploader__input-box {{isShow2?'true':'hideTrue'}}">
+            <view class="weui-uploader__input" bindtap="chooseImage2"></view>
+          </view>
+    </view>
+    <view class="section">
+        <view class="section__title">联系电话</view>
+        <input name="phone" placeholder="" />
+    </view>
+    <view class="section">
+        <view class="section__title">位置</view>
+        <view bindtap="getlocationwz">{{roomname}}</view>
+    </view>
+     <view class="section">
+        <view class="section__title">配送范围</view>
+         <picker bindchange="payBindPickerChange" value="{{pay_index}}" range="{{pay_array}}">
+        {{pay_array[pay_index]}}
+        </picker>
+    </view>
+     <view class="section">
+        <view class="section__title">描述</view>
+        <textarea placeholder="" name="describe" />
+    </view>
+ </view>

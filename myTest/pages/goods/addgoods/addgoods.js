@@ -100,10 +100,10 @@ Page({
     //   disabled: true
     // })
     //准备提交
-    var sub_data = { "user": JSON.stringify(wx.getStorageSync("user")), "title": e.detail.value.title, "describe": e.detail.value.describe, "price": e.detail.value.price, "paytype": this.data.paytype, "distype": this.data.distype, "time": this.data.time, "submitSKU": JSON.stringify(this.data.submitSKU), "img0": newfilepath2, "img1": newfilepath}
+    var sub_data = { "user": JSON.stringify(wx.getStorageSync("user")), "title": e.detail.value.title, "describe": e.detail.value.describe, "price": e.detail.value.price, "paytype": this.data.paytype, "distype": this.data.distype, "time": this.data.time, "submitSKU": JSON.stringify(this.data.submitSKU), "img0": newfilepath2, "img1": newfilepath, "geom": app.globalData.geom}
     console.log(sub_data)
     wx.request({
-      url: 'https://zhao/home/home/saveGoods',
+      url: 'https://zhao/home/home/saveProduct',
       data: sub_data,
       method: 'POST',
       header: {

@@ -1,6 +1,6 @@
 {
   "pages": [
-    
+    "pages/store/store/store",
     "pages/index/index",
     "pages/logs/logs",
     "pages/order/order/order",
@@ -8,7 +8,6 @@
     "pages/store/storelist/storelist",
     "pages/home/home",
     "pages/message/message",
-    "pages/store/store/store",
     "pages/home/authuser/authuser",
     "pages/goods/addgoods/addgoods"
   ],
@@ -29,8 +28,14 @@
         "selectedIconPath": "images/zhu1.png"
       },
       {
+        "pagePath": "pages/index/index",
+        "text": "购物车",
+        "iconPath": "images/zhu1.png",
+        "selectedIconPath": "images/zhu1.png"
+      },
+      {
         "pagePath": "pages/home/home",
-        "text": "我",
+        "text": "我的",
         "iconPath": "images/zhu4.png",
         "selectedIconPath": "images/zhu4.png"
       }
